@@ -1,0 +1,193 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sistik-PMI Bandung" title_halaman="Pemasok Barang">
+  <div>
+    <div class="p-4 ml-64 mt-16">
+      <!-- tabel -->
+      <div
+        class="pt-5 pb-4 px-8 w-full h-[90vh] rounded-xl text-medium bg-slate-400 bg-opacity-50"
+      >
+        <h3 class="text-xl font-bold mb-4 text-white">DAFTAR PEMASOK BARANG</h3>
+        <div class="flex justify-between">
+          <form>
+            <div class="flex shadow-lg shadow-gray-600/50">
+              <div class="relative w-96">
+                <input
+                  type="search"
+                  id="search-dropdown"
+                  class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Nama Pemasok Barang ...."
+                  required
+                />
+                <button
+                  type="submit"
+                  class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+                  </svg>
+                  <span class="sr-only">Search</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <button
+            type="button"
+            data-modal-target="modal-tambah"
+            data-modal-toggle="modal-tambah"
+            class="flex text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-4"
+          >
+            <span class="flex items-center"
+              ><p class="mr-2 font-bold text-lg">+</p> Tambah Data</span
+            >
+          </button>
+        </div>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table
+            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+          >
+            <thead class="text-black uppercase bg-gray-300">
+              <tr>
+                <th scope="col" class="px-6 py-3 w-[5%]"> No.</th>
+                <th scope="col" class="px-6 py-3 w-[15%] text-start"> Nama</th>
+                <th scope="col" class="px-6 py-3 text-start"> Alamat</th>
+                <th scope="col" class="px-6 py-3 w-[12%] text-start"
+                  >Telephon</th
+                >
+                <th scope="col" class="px-6 py-3 text-start w-[12%]">Kontak</th>
+                <th scope="col" class="px-6 py-3 w-[10%]">E-Mail</th>
+                <th scope="col" class="px-6 py-3 w-[25%]">Catatan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="odd:bg-gray-50 even:bg-gray-200 border-b text-black">
+                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                  1
+                </th>
+                <td class="px-6 py-4">PT. Sayah Abadi</td>
+                <td class="px-6 py-4"
+                  ><span
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Mollitia vitae ipsum dignissimos ducimus fugit, officia illo
+                    saepe possimus repellat ut amet consequatur? Omnis modi hic
+                    distinctio nihil enim atque incidunt excepturi impedit. Quo,
+                    iste. Maxime, voluptatem deleniti. Reprehenderit inventore
+                    eos deleniti nesciunt laboriosam vero quo adipisci cum
+                    placeat? Ex, adipisci!
+                  </span></td
+                >
+                <td class="px-6 py-4">(022) 7071 7173</td>
+                <td class="px-6 py-4">SImkuring</td>
+                <td class="px-6 py-4 text-center"> simkuring@gmail.com</td>
+                <td class="px-6 py-4 pr-8"
+                  >Perusahaan ini suka kasbon wae, tapi barangnya lama kirim</td
+                >
+              </tr>
+              <tr class="odd:bg-gray-50 even:bg-gray-200 border-b text-black">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                >
+                  2
+                </th>
+                <td class="px-6 py-4">PT. Tengok Sana Sini</td>
+                <td class="px-6 py-4"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quos, vitae doloremque! Vel saepe, animi quasi enim esse
+                  reprehenderit magni facere quaerat maxime quidem nam
+                  asperiores.
+                </td>
+                <td class="px-6 py-4">0821-2223-2425</td>
+                <td class="px-6 py-4">Hompimpah</td>
+                <td class="px-6 py-4 text-center">kabayan@kumaha.com</td>
+                <td class="px-6 py-4 pr-8">Tiasa diajak badami</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Paganation -->
+        <nav
+          class="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4"
+          aria-label="Table navigation"
+        >
+          <span
+            class="text-sm font-normal text-white mb-4 md:mb-0 block w-full md:inline md:w-auto"
+            >Showing <span class="font-semibold text-gray-900 dark:text-white"
+              >1-10</span
+            > of <span class="font-semibold text-gray-900 dark:text-white"
+              >1000</span
+            ></span
+          >
+          <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
+            <li>
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >Previous</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >1</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >2</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                aria-current="page"
+                class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                >3</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >4</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >5</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                >Next</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End tabel -->
+    </div>
+  </div>
+</Layout>

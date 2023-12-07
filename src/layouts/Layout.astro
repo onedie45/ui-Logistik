@@ -1,0 +1,34 @@
+---
+import NavbarMenu from "./Navbar.astro";
+import SidebarMenu from "./Sidebar.astro";
+import "../asset/icon/font-awesome.css";
+import LogoPmi from "../asset/logo-pmi.png";
+
+interface Props {
+  title: String;
+}
+
+const {title, title_halaman} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script> -->
+    <script src="../js//flowbite.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="favicon.svg" />
+
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-[url('bgLogin.jpg')] bg-cover bg-no-repeat">
+    <NavbarMenu title_halaman={title_halaman} />
+
+    <SidebarMenu />
+
+    <slot />
+  </body>
+</html>
